@@ -22,13 +22,13 @@ def rec():
         ent2.insert(tk.END,sentence)    
 
     for each in words:
-        if each == "what" or each =="who":
-            ans = wikipedia.summary(' '.join(words[1:]),sentences =1) # rn voice ain't working may be my mac sucks
-            ent1.insert(tk.END,ans)
-            speaker.say(ans)
-            speaker.runAndWait()
-            wb.open_new("https://en.wikipedia.org/wiki/"+'_'.join(words[2:]))   #https://en.wikipedia.org/wiki/Bill_Gates
-            
+        if each in greetings:
+
+            x = random.randint(0, len(intro))
+            ent1.insert(tk.END, intro[x])
+            # speaker.say(intro[x])
+            # speaker.runAndWait
+
         elif each == 'play' :
             
             ent1.insert(tk.END,"SWITCHING TO YOUTUBE")
@@ -41,19 +41,20 @@ def rec():
              ent1.insert(tk.END,"SWITCHING TO GOOGLE")
              wb.open_new("https://www.google.com/search?client=safari&rls=en&q="+'+'.join(words[1:])+"&ie=UTF-8&oe=UTF-8")
         
-        elif each in greetings:
-            x = random.randint(0,len(intro))
-            ent1.insert(tk.END,greetings[x])
-            speaker.say(intro[x])
-            speaker.runAndWait()
-            
-        
-        elif each=='close' or each =="bye" or each == "quit" or each == "exit":
+        elif each == 'what' or each == 'who':
+            ans = wikipedia.summary(' '.join(words[1:]), sentences=1)  # rn voice ain't working may be my mac sucks
+            ent1.insert(tk.END, ans)
+            # speaker.say(ans)
+            # speaker.runAndWait()
+            wb.open_new(
+                "https://en.wikipedia.org/wiki/" + '_'.join(words[2:]))  # https://en.wikipedia.org/wiki/Bill_Gates
+
+         elif each=='close' or each =="bye" or each == "quit" or each == "exit":
             wish= "BYE ! SEE YA LATER"
-            ent1.insert(tk.END,wish+'\n')
+            ent1.insert(tk.END,wish+'\n')           # this line isn't working due to line 57
             speaker.say("bye bye")
             speaker.runAndWait()
-            
+
          
         
     
