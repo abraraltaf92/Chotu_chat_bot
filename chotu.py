@@ -12,25 +12,30 @@ intro = ["Myself Chotu! What can i do for you, sir","Hey boss! I am your voice a
 
 speaker = pyttsx3.init()
 def rec():
-
+    ent2.delete('1.0',tk.END)
+    ent1.delete('1.0',tk.END)
     r = sr.Recognizer()
     with sr.Microphone() as source:
         audio = r.listen(source)
         sentence = r.recognize_google(audio,language="en-in")
         words = sentence.split()
-        ent2.insert(tk.END,sentence)
+        ent2.insert(tk.END,sentence)    
 
     for each in words:
         if each == "what" or each =="who":
-            ans = wikipedia.summary(' '.join(words[2:]),sentences =1) # rn voice ain't working may be my mac sucks
+            ans = wikipedia.summary(' '.join(words[1:]),sentences =1) # rn voice ain't working may be my mac sucks
             ent1.insert(tk.END,ans)
             speaker.say(ans)
             speaker.runAndWait()
             wb.open_new("https://en.wikipedia.org/wiki/"+'_'.join(words[2:]))   #https://en.wikipedia.org/wiki/Bill_Gates
             
         elif each == 'play' :
+            
             ent1.insert(tk.END,"SWITCHING TO YOUTUBE")
             wb.open_new("https://www.youtube.com/results?search_query="+'+'.join(words[1:]))
+            
+            
+            
 
         elif each == 'search':
              ent1.insert(tk.END,"SWITCHING TO GOOGLE")
@@ -48,17 +53,18 @@ def rec():
             ent1.insert(tk.END,wish+'\n')
             speaker.say("bye bye")
             speaker.runAndWait()
-            # time.sleep(3)     #speaker itself terminates the window
-            # window.destroy() 
-
-    # ent1.delete('1.0',tk.END)   #--> if executed then no values in text boxes from the very start
-    # ent2.delete("1.0",tk.END)
+            
+         
+        
+    
+  
 
 #creating gui
 
 window = tk.Tk()
 window.title("Assistant By Abrar")
 window.geometry("300x300")
+window.resizable(False,False)
 window.configure(bg="#9136a3")
 
 tk.Label(window,text="---->Chotu Says<----",bg="#4a4a82",fg="#fcbd81",width=300).pack(pady=15)
