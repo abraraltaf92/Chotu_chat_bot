@@ -35,5 +35,5 @@ greetings like Hello --> will be replied by bot
 so far only this much ...... work in progress
 <br>
 # Problems:
-## 1) If voice recognition is activated after completing its task the window gets destroyed(exit).
-## 2) Also when voice recognition is working nothing can be inserted in textform fields.
+## 1) If pyttsx3 is activated after completing its task the window gets destroyed(exit).
+## 2) Also when pyttsx3 is working nothing can be inserted in textform fields.
