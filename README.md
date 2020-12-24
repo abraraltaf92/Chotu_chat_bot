@@ -26,6 +26,7 @@ search --> google
 <br>
 greetings like Hello --> will be replied by bot
 <br>
+
 ## Images:
 
 ![](screenshots/root.png)
