@@ -15,6 +15,7 @@ greetings like Hello --> will be replied by bot
 ![](screenshots/yt.png)
 ![](screenshots/google.png)
 so far only this much ...... work in progress
-#Problem:
+<br>
+# Problems:
 ## 1) If voice recognition is activated after completing its task the window gets destroyed(exit).
 ## 2) Also when voice recognition is working nothing can be inserted in textform fields.
