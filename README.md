@@ -15,7 +15,7 @@
   
   ## Windows
   
-    {where you stored the folder}\venv\bin\activate
+    help me i don't know!
     
 ### --> Installing the Package
     pip3 install -r requirements.txt
