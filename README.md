@@ -4,7 +4,7 @@
 ## How to make it run ( commands to be used in cmd / terminal )
 ### --> You can download the folder from here : 
 
-    git@github.com:abraraltaf92/Chotu_chat_bot.git
+    git clone https://github.com/abraraltaf92/Chotu_chat_bot.git
     
 ### -->  Setting Up Your Virtual Environment :
   #### To activate it:  
