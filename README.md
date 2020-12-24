@@ -8,7 +8,15 @@
     
 ### -->  Setting Up Your Virtual Environment :
   #### To activate it:  
-    source {where you stored the folder}/venv/bin/activate
+  
+  ## Mac Os
+   
+   source {where you stored the folder}/venv/bin/activate
+  
+  ## Windows
+  
+    {where you stored the folder}\venv\bin\activate
+    
 ### --> Installing the Package
     pip3 install -r requirements.txt
 ### --> To run 
