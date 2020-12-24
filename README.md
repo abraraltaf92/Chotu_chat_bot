@@ -11,7 +11,7 @@
   
   ## Mac Os
    
-   source {where you stored the folder}/venv/bin/activate
+    source {where you stored the folder}/venv/bin/activate
   
   ## Windows
   
